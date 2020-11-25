@@ -10,5 +10,6 @@
 
 .container{
     
-    max-width: none;
+    max-width: none !important;
+    padding: 0 0 0 0 !important;
 }
