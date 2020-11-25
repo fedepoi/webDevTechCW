@@ -3,6 +3,12 @@
 /*nav menu style*/
 .navMenu{
     width: 100%;
+    height: 90px;
     background-color: #62987C;
     
+}
+
+.container{
+    
+    max-width: none;
 }
