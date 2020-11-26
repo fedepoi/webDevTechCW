@@ -3,10 +3,54 @@
 /*nav menu style*/
 .navMenu{
     width: 100%;
-    height: 90px;
+    height: 100px;
     background-color: #62987C;
     
 }
+
+.imgDiv{
+	margin-left:1%;
+	height: 100px;
+	width: 100px
+}
+
+.imgDiv img{
+	width: 110px;
+	height: 100px;
+	object-fit:cover;}
+
+.navContainer{
+	position: absolute;
+	width: inherit;
+	background-color: #00594C;
+}
+
+.navUl{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navUl li{
+	width: 13%;
+	float: left;
+}
+
+.navUl li a{
+  display: block;
+  color: white;
+  background-color: #2b3e3b;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navUl li a:hover{
+	background-color: #DEA912;
+}
+
+/*end nav menu styling*/
 
 .container{
     
