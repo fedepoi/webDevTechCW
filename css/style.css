@@ -1,5 +1,9 @@
 /* CSS Document */
-
+*{
+	font-family: "lato" ;
+	src: url("../font/Lato-Regular.ttf");
+	
+}
 /*nav menu style*/
 .navMenu{
     width: 100%;
@@ -53,7 +57,31 @@
 
 /*styling 2nd row homepage*/
 #homepageImg{
-	width: 40%;
+	width: 90%;
+	padding-top: 40%;
+	-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+
+
+.homepageTextDiv{
+	margin-top: 30%;
+	text-align: center
+}
+
+.homeButton{
+	background-color:#5B7671;
+	border: none;
+	color: white;
+	max-width: 120px;
+	width:120px;
+   height:50px;
+   text-align:center;
+   line-height:1.1em;
+   font-size:1.1em;
+	border-radius: 8px;
+
 }
 
 
