@@ -3,8 +3,8 @@
 /*nav menu style*/
 .navMenu{
     width: 100%;
-    height: 100px;
     background-color: #62987C;
+	padding-top: 5px;
     
 }
 
@@ -20,8 +20,7 @@
 	object-fit:cover;}
 
 .navContainer{
-	position: absolute;
-	width: inherit;
+	margin-top: 5px;
 	background-color: #00594C;
 }
 
@@ -52,8 +51,22 @@
 
 /*end nav menu styling*/
 
+/*styling 2nd row homepage*/
+.col-1 img{
+	width: 50%;
+}
+
+
 .container{
-    
     max-width: none !important;
     padding: 0 0 0 0 !important;
+}
+
+.row{margin: 0 0 0 0 !important;
+     padding: 0 0 0 0 !important;
+}
+
+.col{
+	margin: 0 0 0 0 !important;
+     padding: 0 0 0 0 !important;
 }
