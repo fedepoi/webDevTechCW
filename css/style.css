@@ -11,11 +11,11 @@
 .imgDiv{
 	margin-left:1%;
 	height: 100px;
-	width: 100px
+	width: 120px;
 }
 
 .imgDiv img{
-	width: 110px;
+	width: 120px;
 	height: 100px;
 	object-fit:cover;}
 
