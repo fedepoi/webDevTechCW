@@ -3,6 +3,7 @@
 
 function requestSoc(){
 var selectedTitle = document.getElementById("selectedTitle").value;
+	$("#resultTitle").html("");
 $(function() {
 	
     var req = $.ajax({
@@ -12,6 +13,13 @@ $(function() {
     });
     req.done(function(data) {
 		console.log(data);
+		
+	$.each( data, function( key, value ) {
+  /*  alert( key + ": " + value.title );*/
+	$("#resultTitle").append('<button id="resButton'+key+'" value='+value+'>'+value.title+'</button> <br>');
+		return (key !== 4);
+});
+	
     })
 });
 }
