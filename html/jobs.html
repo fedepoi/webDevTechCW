@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Latest stable release of jQuery Core Library-->
+<script src="../jQuery 3.5.1/jquery-3.5.1.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--my scripts-->
+<script src="../js/requestTitle.js"></script>
+ 
+<!--personalised style sheet-->
+<link rel="stylesheet" href="../css/style.css">
+    
+<!--Bootstrap-->
+<link rel="stylesheet" href="../bootstrap-4.4.1/css/bootstrap.min.css">
+
+<!--Bootstrap JS-->
+<script src="../bootstrap-4.4.1/js/bootstrap.min.js">
+</script>
+	
+    
+<title>Jobs</title>
+</head>
+
+<body>
+    
+    <!--start bootsrap grid container-->
+    <div class="container">
+  <div class="row">
+    <div class="col">
+      <!--start css nav menu-->
+       <div class="navMenu">
+		   <div class="imgDiv">
+		   <a href="../index.html"><img src="../img/logoColor.png" alt="logo" width="120"></a>
+		   </div>
+		   <div class="navContainer">
+            <ul class="navUl">
+            <li><a href="jobs.html" id="currentPage">Jobs</a></li>
+            <li><a href="#news">Universities</a></li>
+            <li><a href="#contact">About Us</a></li>
+            </ul>
+			   </div>
+        </div>        
+    </div>
+  </div>
+		
+	<!--first column-->
+		<div class="row ">
+    <div class="col-sm-4 ">
+		<div class="jobSearchDiv">
+		Job: 
+		<br>
+			<!--input group-->
+		<div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for..." id="selectedTitle">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onClick="requestSoc()">go!</button>
+      </span>
+    </div><!--end input group-->
+		<br>
+		Available titles within your search:
+			<br>
+			</div>
+    </div>
+    <!--second column-->
+  <div class="col">
+  </div>	
+    <!--third column-->
+    <div class="col-sm-4"></div>
+
+</div>	
+
+</div>   
+</body>
+</html>

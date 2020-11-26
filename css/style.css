@@ -7,7 +7,7 @@
 /*nav menu style*/
 .navMenu{
     width: 100%;
-    background-color: #62987C;
+    background-color: #5B7671;
 	padding-top: 5px;
     
 }
@@ -51,6 +51,10 @@
 
 .navUl li a:hover{
 	background-color: #DEA912;
+}
+
+#currentPage{
+	background-color: #62987C;
 }
 
 /*end nav menu styling*/
