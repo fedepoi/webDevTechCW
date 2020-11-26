@@ -15,8 +15,7 @@ $(function() {
 		console.log(data);
 		
 	$.each( data, function( key, value ) {
-  /*  alert( key + ": " + value.title );*/
-	$("#resultTitle").append('<button id="resButton'+key+'" value='+value+'>'+value.title+'</button> <br>');
+	$("#resultTitle").append('<button id="resButton'+key+'" value= '+value.soc+' onclick="displayInfo(event)" >'+value.title+'</button> <br>');
 		return (key !== 4);
 });
 	

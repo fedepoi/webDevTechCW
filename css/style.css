@@ -89,6 +89,14 @@
 }
 
 
+/*style jobPage*/
+#jobPageImg{
+	width: 70%;
+	margin-top: 15%;
+}
+
+/*end job page styling*/
+
 .container{
     max-width: none !important;
     padding: 0 0 0 0 !important;
