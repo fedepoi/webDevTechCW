@@ -57,6 +57,10 @@
 	background-color: #62987C;
 }
 
+#currentPage:hover{
+	background-color: #DEA912;
+}
+
 /*end nav menu styling*/
 
 /*styling 2nd row homepage*/
@@ -91,10 +95,29 @@
 
 /*style jobPage*/
 #jobPageImg{
-	width: 70%;
-	margin-top: 15%;
+	width: 100%;
+	margin-top: 55%;
+	 
 }
 
+#selectedTitle{
+	color: #000000;
+	background-color: #62987C;
+}
+
+#selectedTitlrBtnSearch{
+
+	background-color: #62987C;
+	border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+#resultTitle button{
+	margin-top: 3%;
+	background-color: #62987C;
+	border: none;
+	border-radius: .25rem;
+}
 /*end job page styling*/
 
 .container{
@@ -109,4 +132,8 @@
 .col{
 	margin: 0 0 0 0 !important;
      padding: 0 0 0 0 !important;
+}
+
+.col-sm-2 {
+	border-right: 1px solid #707070;
 }
