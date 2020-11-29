@@ -136,4 +136,5 @@ border-bottom-left-radius: 0;
 
 .col-sm-2 {
 	border-right: 1px solid #707070;
+	height: calc(100vh - 162px);
 }

@@ -1,6 +1,9 @@
 // JavaScript Document
 
 function displayInfo(event){
+ $(".descP").html("");
+	$(".qualP").html("");
+	$(".taskP").html("");
 var info =  event.target.value;
 console.log(info);
 	
@@ -15,9 +18,9 @@ $(function() {
 		console.log(data);
 		/*need to print all the info from here*/
 		
-		$("<p>"+data.description+"</p>").appendTo($(".descP")).hide().slideDown("slow");
-		$("<p>"+data.qualifications+"</p>").appendTo($(".qualP")).hide().slideDown("slow");
-		$("<p>"+data.tasks+"</p>").appendTo($(".taskP")).hide().slideDown("slow");
+		$("<h3>Description:</h3>"+"<p>"+data.description+"</p>").appendTo($(".descP")).hide().slideDown("slow");
+		$("<h3>Qualification:</h3>"+"<p>"+data.qualifications+"</p>").appendTo($(".qualP")).hide().slideDown("slow");
+		$("<h3>Tasks:</h3>"+"<p>"+data.tasks+"</p>").appendTo($(".taskP")).hide().slideDown("slow");
 		
     })
 });	
