@@ -1,6 +1,5 @@
 <!doctype html>
-<html>
-<head>
+<html><head>
 <meta charset="utf-8">
     
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,10 @@
 <!--my scripts-->
 <script src="../js/requestTitle.js"></script>
 <script src="../js/displayInfo.js"></script>
- 
+
+
+<!--chart.js script-->
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> 
 <!--personalised style sheet-->
 <link rel="stylesheet" href="../css/style.css">
     
@@ -89,10 +91,17 @@
 	  </div>	  
   </div>	
     <!--third column-->
-    <div class="col"></div>
+    <div class="col">
+		<!--<div style="height: 800px; width:800px;"> <canvas id="barChart"></canvas></div>
+		
+		<div style="height: 800px; width:800px;"> <canvas id="lineChart"></canvas></div>-->
+		
+        <div style="height: 800px; width:800px;"> <canvas id="pieChart"></canvas></div>
+			</div>
 
-</div>	
+			</div>	
 
-</div>   
+</div>  
+ 
 </body>
 </html>

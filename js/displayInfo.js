@@ -1,5 +1,5 @@
 // JavaScript Document
-
+var soc = "";
 function displayInfo(event){
  $(".descP").html("");
 	$(".qualP").html("");
@@ -10,7 +10,7 @@ function displayInfo(event){
     
 var info =  event.target.value;
 console.log(info);
-	
+soc=info;	
 $(function() {
 	
     var req = $.ajax({
@@ -32,22 +32,104 @@ $(function() {
 		
     })
 });
-    
-
-$(function() {
 	
+	displayPieChart();
+    	
+}
+
+
+
+
+
+function displayPieChart(){
+	$(function() {
     var req = $.ajax({
-        url: "http://api.lmiforall.org.uk/api/v1/soc/code/"+ info,
+        url: "http://api.lmiforall.org.uk/api/v1/hesa/courses/"+ soc,
         type: "get",
         dataType: "json"
     });
     req.done(function(data) {
+     console.log(data);
+	 console.log(data.years[3]);
 		
+     var dataItem =data.years[3];
+	 var items = dataItem.courses.map(item => item.percentage);
+     var label = dataItem.courses.map(item => item.name);
 		
-    })
-});
-    
+	 items = items.slice(0, 10);
+     label = label.slice(0, 10);
+		
+	 console.log('***************************************************');
+     console.log(items);
+     console.log(label);
+     console.log('***************************************************');	
+		
+	  var ctx = document.getElementById('pieChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'pie',
 
-	
+            data: {
+                labels: label,
+                datasets: [{
+                    data: items,
+                    backgroundColor: [
+                        '#64CC98',
+                        '#FFAF03',
+                        '#3E805F',
+                        '#5B7671',
+                        '#00594C',
+                        '#64CC98',
+                        '#FFAF03',
+                        '#3E805F',
+                        '#5B7671',
+                        '#00594C'
+                    ],
+                    hoverBackgroundColor: '#707070',
+
+
+                }]
+            },
+            options: {
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        top: 50,
+                        bottom: 0
+                    }
+                },
+                legend: {
+                    position: 'right',
+                    labels: {
+                      usePointStyle: true,
+					 
+                    },
+
+                },
+				
+                title: {
+                    display: true,
+                    text: 'People working in this field studied:'
+                }
+
+            }
+        })
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    });
+});
 	
 }
