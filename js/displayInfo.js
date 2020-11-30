@@ -1,12 +1,28 @@
 // JavaScript Document
 var soc = "";
 function displayInfo(event){
- $(".descP").html("");
+    $(".descP").html("");
 	$(".qualP").html("");
 	$(".taskP").html("");
+	
+	
     $(".col-sm-2").css("height", "calc(100vh - 162px)");
     $(".col-sm-4").css("height", "calc(100vh - 162px)");
-    
+	
+/*	
+	var canPie = document.getElementById("pieChart");
+   var canLine = document.getElementById("lineChart");
+	var canBar = document.getElementById("barChart");
+	
+	var conPie = canPie.getContext("2d");
+var conLine = canLine.getContext("2d");
+	var conBar = canBar.getContext("2d");
+	
+	conPie.clearRect(0, 0, canvas.width, canvas.height);
+    conLine.clearRect(0, 0, canvas.width, canvas.height);
+	conBar.clearRect(0, 0, canvas.width, canvas.height);
+	*/
+	
     
 var info =  event.target.value;
 console.log(info);
@@ -34,6 +50,7 @@ $(function() {
 });
 	
 	displayPieChart();
+	displayLineChart()
     	
 }
 
@@ -115,19 +132,68 @@ function displayPieChart(){
             }
         })
 		
+				
 		
+    });
+});
+	
+}
+
+
+function displayLineChart(){
+	$(function() {
+    var req = $.ajax({
+        url: "http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc="+ soc,
+        type: "get",
+        dataType: "json"
+    });
+    req.done(function(data) {
+     console.log(data);
+	 console.log(data.series);
 		
+     var dataItem =data;
+	 var items = dataItem.series.map(item => item.estpay);
+     var label = dataItem.series.map(item => item.year);
 		
+	 items = items.slice(0, 10);
+     label = label.slice(0, 10);
 		
+	 console.log('***************************************************');
+     console.log(items);
+     console.log(label);
+     console.log('***************************************************');	
 		
+	  var ctx = document.getElementById('lineChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+
+            data: {labels : label ,
+				    datasets: [{
+            label: 'Weekly estimate pay',
+            backgroundColor: 'rgba(0, 0, 0, 0.1)',
+            borderColor: '#FFAF03',
+            data: items
+        }]
+    },
+		 options: {
+               layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        top: 0,
+                        bottom: 0
+                    }
+                }
+               
+                }
+
+            
+				
+               
+            
+        })
 		
-		
-		
-		
-		
-		
-		
-		
+				
 		
     });
 });
