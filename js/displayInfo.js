@@ -1,6 +1,7 @@
 // JavaScript Document
 var soc = "";
 function displayInfo(event){
+	
     $(".descP").html("");
 	$(".qualP").html("");
 	$(".taskP").html("");
@@ -9,20 +10,27 @@ function displayInfo(event){
     $(".col-sm-2").css("height", "calc(100vh - 162px)");
     $(".col-sm-4").css("height", "calc(100vh - 162px)");
 	
-/*	
+/*
 	var canPie = document.getElementById("pieChart");
-   var canLine = document.getElementById("lineChart");
+    var canLine = document.getElementById("lineChart");
 	var canBar = document.getElementById("barChart");
 	
+	
+	
+    if(canPie.toDataURL() !== document.getElementById('blank').toDataURL() && 
+    canLine.toDataURL() !== document.getElementById('blank').toDataURL() && 
+    canBar.toDataURL() !== document.getElementById('blank').toDataURL()) {
 	var conPie = canPie.getContext("2d");
-var conLine = canLine.getContext("2d");
+    var conLine = canLine.getContext("2d");
 	var conBar = canBar.getContext("2d");
+     
+	conPie.clearRect(0, 0, canPie.width, canPie.height);
+    conLine.clearRect(0, 0, canLine.width, canLine.height);
+	conBar.clearRect(0, 0, canBar.width, canBar.height);
+	} 
 	
-	conPie.clearRect(0, 0, canvas.width, canvas.height);
-    conLine.clearRect(0, 0, canvas.width, canvas.height);
-	conBar.clearRect(0, 0, canvas.width, canvas.height);
+	
 	*/
-	
     
 var info =  event.target.value;
 console.log(info);
@@ -57,6 +65,8 @@ $(function() {
 
 
 function displayPieChart(){
+	
+	
 	$(function() {
     var req = $.ajax({
         url: "http://api.lmiforall.org.uk/api/v1/hesa/courses/"+ soc,
@@ -116,14 +126,20 @@ function displayPieChart(){
                 legend: {
                     position: 'right',
                     labels: {
-                      usePointStyle: true					 
+                      usePointStyle: true,
+					  fontColor: 'black',
+					  fontFamily: 'lato',
+					  fontSize: 16,
                     },
 
                 },
 				
                 title: {
                     display: true,
-                    text: 'People working in this field studied:'
+                    text: 'People working in this field studied:',
+					fontColor: 'black',
+					  fontFamily: 'lato',
+					  fontSize: 16,
                 }
 
             }
@@ -169,6 +185,11 @@ function displayLineChart(){
 		    borderWidth: 3 , 
 			hoverBackgroundColor: '#707070',
 			pointHoverBorderWidth: 5,
+						
+			fontColor: 'black',
+					  fontFamily: 'lato',
+					  fontSize: 16,
+						
             data: items
         }]
     },
@@ -184,7 +205,9 @@ function displayLineChart(){
 			     legend: {
                     labels: {
                       usePointStyle: true,
-					 
+						fontColor: 'black',
+					  fontFamily: 'lato',
+					  fontSize: 16,					 
                     }
 
                 }
@@ -234,6 +257,10 @@ function displayBarChart(){
 		    borderWidth: 3 , 
 			hoverBackgroundColor: '#707070',
 			pointHoverBorderWidth: 5,
+			fontColor: 'black',
+					  fontFamily: 'lato',
+					  fontSize: 16,
+				
             data: items
         }]
     },
@@ -249,6 +276,9 @@ function displayBarChart(){
 			     legend: {
                     labels: {
                       usePointStyle: true,
+						fontColor: 'black',
+					  fontFamily: 'lato',
+					  fontSize: 16,
 					 
                     }
 
