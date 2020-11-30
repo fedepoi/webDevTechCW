@@ -37,10 +37,10 @@ $(function() {
     req.done(function(data) {
 		console.log(data);
 		/*need to print all the info from here*/
-		$(".col-sm-4").css("border-right"," 1px solid #707070");
+		$(".col-sm-3").css("border-right"," 1px solid #707070");
         $(".2ndCenter div").css("padding", "15px 15px 15px 15px");
         $(".col-sm-2").css("height", "auto");
-        $(".col-sm-4").css("height", "auto");
+        $(".col-sm-3").css("height", "auto");
         
 		$("<h3>Description:</h3>"+"<p>"+data.description+"</p>").appendTo($(".descP")).hide().slideDown("slow");
 		$("<h3>Qualification:</h3>"+"<p>"+data.qualifications+"</p>").appendTo($(".qualP")).hide().slideDown("slow");
@@ -50,12 +50,10 @@ $(function() {
 });
 	
 	displayPieChart();
-	displayLineChart()
+	displayLineChart();
+	displayBarChart();
     	
 }
-
-
-
 
 
 function displayPieChart(){
@@ -109,7 +107,7 @@ function displayPieChart(){
             options: {
                 layout: {
                     padding: {
-                        left: 50,
+                        left: 0,
                         right: 0,
                         top: 50,
                         bottom: 0
@@ -118,8 +116,7 @@ function displayPieChart(){
                 legend: {
                     position: 'right',
                     labels: {
-                      usePointStyle: true,
-					 
+                      usePointStyle: true					 
                     },
 
                 },
@@ -139,7 +136,6 @@ function displayPieChart(){
 	
 }
 
-
 function displayLineChart(){
 	$(function() {
     var req = $.ajax({
@@ -153,11 +149,9 @@ function displayLineChart(){
 		
      var dataItem =data;
 	 var items = dataItem.series.map(item => item.estpay);
-     var label = dataItem.series.map(item => item.year);
-		
+     var label = dataItem.series.map(item => item.year);	
 	 items = items.slice(0, 10);
      label = label.slice(0, 10);
-		
 	 console.log('***************************************************');
      console.log(items);
      console.log(label);
@@ -169,33 +163,105 @@ function displayLineChart(){
 
             data: {labels : label ,
 				    datasets: [{
-            label: 'Weekly estimate pay',
+            label: 'Weekly estimate pay £',
             backgroundColor: 'rgba(0, 0, 0, 0.1)',
             borderColor: '#FFAF03',
+		    borderWidth: 3 , 
+			hoverBackgroundColor: '#707070',
+			pointHoverBorderWidth: 5,
             data: items
         }]
     },
 		 options: {
                layout: {
                     padding: {
-                        left: 50,
+                        left: 0,
                         right: 0,
-                        top: 0,
+                        top: 50,
                         bottom: 0
                     }
-                }
-               
-                }
+                },
+			     legend: {
+                    labels: {
+                      usePointStyle: true,
+					 
+                    }
 
-            
-				
+                }
                
-            
+                }
         })
 		
 				
 		
     });
 });
+	
+}
+
+
+function displayBarChart(){
+	$(function() {
+    var req = $.ajax({
+        url: "http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?soc="+ soc,
+        type: "get",
+        dataType: "json"
+    });
+    req.done(function(data) {
+     console.log(data);
+	 console.log(data.series);
+		
+     var dataItem =data;
+	 var items = dataItem.series.map(item => item.hours);
+     var label = dataItem.series.map(item => item.year);	
+	 items = items.slice(0, 10);
+     label = label.slice(0, 10);
+	 console.log('***************************************************');
+     console.log(items);
+     console.log(label);
+     console.log('***************************************************');	
+		
+	  var ctx = document.getElementById('barChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+
+            data: {labels : label ,
+				   
+				    datasets: [{
+            label: 'Weekly average hours h',
+            backgroundColor: '#00594C',
+            borderColor: '#00594C',
+		    borderWidth: 3 , 
+			hoverBackgroundColor: '#707070',
+			pointHoverBorderWidth: 5,
+            data: items
+        }]
+    },
+		 options: {
+               layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 50,
+                        bottom: 0
+                    }
+                },
+			     legend: {
+                    labels: {
+                      usePointStyle: true,
+					 
+                    }
+
+                }
+               
+                }
+        })
+		
+				
+		
+    });
+});
+	
+	
 	
 }
