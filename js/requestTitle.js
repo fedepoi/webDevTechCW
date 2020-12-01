@@ -15,10 +15,11 @@ $(function() {
 		console.log(data);
 		
 	$.each( data, function( key, value ) {
-	$("#resultTitle").append('<button  id="resButton'+key+'" value= '+value.soc+' onclick="displayInfo(event)" >'+value.title+'</button> <br>');
+	$("#resultTitle").append('<button  id="resButton'+key+'" value= '+value.soc+' onclick="displayInfo(event)" >'+value.title+'</button> <br>').hide().slideDown("slow");
 		return (key !== 4);
 });
 	
     })
 });
+   /*$("#jobPageImg").css("margin-top", "5%");*/
 }

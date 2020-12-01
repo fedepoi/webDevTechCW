@@ -10,27 +10,11 @@ function displayInfo(event){
     $(".col-sm-2").css("height", "calc(100vh - 162px)");
     $(".col-sm-4").css("height", "calc(100vh - 162px)");
 	
-/*
-	var canPie = document.getElementById("pieChart");
-    var canLine = document.getElementById("lineChart");
-	var canBar = document.getElementById("barChart");
-	
-	
-	
-    if(canPie.toDataURL() !== document.getElementById('blank').toDataURL() && 
-    canLine.toDataURL() !== document.getElementById('blank').toDataURL() && 
-    canBar.toDataURL() !== document.getElementById('blank').toDataURL()) {
-	var conPie = canPie.getContext("2d");
-    var conLine = canLine.getContext("2d");
-	var conBar = canBar.getContext("2d");
-     
-	conPie.clearRect(0, 0, canPie.width, canPie.height);
-    conLine.clearRect(0, 0, canLine.width, canLine.height);
-	conBar.clearRect(0, 0, canBar.width, canBar.height);
-	} 
-	
-	
-	*/
+    $(".pieChartDiv").html("");
+    $(".lineChartDiv").html("");
+    $(".barChartDiv").html("");
+
+
     
 var info =  event.target.value;
 console.log(info);
@@ -60,12 +44,13 @@ $(function() {
 	displayPieChart();
 	displayLineChart();
 	displayBarChart();
+
     	
 }
 
 
 function displayPieChart(){
-	
+	$(".pieChartDiv").append(' <canvas id="pieChart"></canvas>');
 	
 	$(function() {
     var req = $.ajax({
@@ -117,7 +102,7 @@ function displayPieChart(){
             options: {
                 layout: {
                     padding: {
-                        left: 0,
+                        left: 50,
                         right: 0,
                         top: 50,
                         bottom: 0
@@ -129,7 +114,7 @@ function displayPieChart(){
                       usePointStyle: true,
 					  fontColor: 'black',
 					  fontFamily: 'lato',
-					  fontSize: 16,
+					  fontSize: 12,
                     },
 
                 },
@@ -153,6 +138,7 @@ function displayPieChart(){
 }
 
 function displayLineChart(){
+    $(".lineChartDiv").append(' <canvas id="lineChart"></canvas>');
 	$(function() {
     var req = $.ajax({
         url: "http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc="+ soc,
@@ -179,7 +165,7 @@ function displayLineChart(){
 
             data: {labels : label ,
 				    datasets: [{
-            label: 'Weekly estimate pay £',
+            label: 'pay £',
             backgroundColor: 'rgba(0, 0, 0, 0.1)',
             borderColor: '#FFAF03',
 		    borderWidth: 3 , 
@@ -203,13 +189,21 @@ function displayLineChart(){
                     }
                 },
 			     legend: {
+                     position: 'left',
                     labels: {
                       usePointStyle: true,
 						fontColor: 'black',
 					  fontFamily: 'lato',
-					  fontSize: 16,					 
+					  fontSize: 12,					 
                     }
 
+                },
+             title: {
+                    display: true,
+                    text: 'Weekly estimate pay',
+					fontColor: 'black',
+					  fontFamily: 'lato',
+					  fontSize: 16,
                 }
                
                 }
@@ -224,6 +218,7 @@ function displayLineChart(){
 
 
 function displayBarChart(){
+    $(".barChartDiv").append(' <canvas id="barChart"></canvas>');
 	$(function() {
     var req = $.ajax({
         url: "http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?soc="+ soc,
@@ -251,7 +246,7 @@ function displayBarChart(){
             data: {labels : label ,
 				   
 				    datasets: [{
-            label: 'Weekly average hours h',
+            label: 'hours h',
             backgroundColor: '#00594C',
             borderColor: '#00594C',
 		    borderWidth: 3 , 
@@ -274,14 +269,22 @@ function displayBarChart(){
                     }
                 },
 			     legend: {
+                     position: 'left',
                     labels: {
                       usePointStyle: true,
 						fontColor: 'black',
 					  fontFamily: 'lato',
-					  fontSize: 16,
+					  fontSize: 12,
 					 
                     }
 
+                },
+             title: {
+                    display: true,
+                    text: 'weekly avarage hours',
+					fontColor: 'black',
+					  fontFamily: 'lato',
+					  fontSize: 16,
                 }
                
                 }

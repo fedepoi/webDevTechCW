@@ -95,9 +95,15 @@
 
 /*style jobPage*/
 #jobPageImg{
-	width: 100%;
-	margin-top: 55%;
-	 
+    
+	width: 15%;
+	/*margin-top: 50%;*/
+	 position: fixed;
+    bottom: 0;
+}
+
+.jobSearchDiv{
+    padding-top: 20px;
 }
 
 #selectedTitle{
@@ -142,5 +148,12 @@ border-bottom-left-radius: 0;
 
 .pieChartDiv{
 	margin: 0 auto;
+    margin-top: 12%;
 }
+.lineChartDiv{
+    margin-top: 5%
+}
+.barChartDiv{
+    margin-top: 5%;}
+
 
