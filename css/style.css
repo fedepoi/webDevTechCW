@@ -47,6 +47,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 16;
 }
 
 .navUl li a:hover{
@@ -94,7 +95,7 @@
 
 
 /*style jobPage*/
-#jobPageImg{
+.pageImg{
     
 	width: 15%;
 	/*margin-top: 50%;*/
@@ -104,11 +105,13 @@
 
 .jobSearchDiv{
     padding-top: 20px;
+	
 }
+
 
 #selectedTitle{
 	color: #000000;
-	background-color: #62987C;
+	background-color: #62987C !important;
 }
 
 #selectedTitlrBtnSearch{
@@ -156,4 +159,14 @@ border-bottom-left-radius: 0;
 .barChartDiv{
     margin-top: 5%;}
 
+/*start styling uni page*/
+#uniPageLeft{
+	background-color: rgba(62,128,95,0.50);
+	border-right: none;
+}
 
+#uniPageImg{
+	-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+/*end styiling*/
