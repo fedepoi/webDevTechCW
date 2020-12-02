@@ -112,6 +112,7 @@
 #selectedTitle{
 	color: #000000;
 	background-color: #62987C !important;
+    border: none;
 }
 
 #selectedTitlrBtnSearch{
@@ -160,6 +161,7 @@ border-bottom-left-radius: 0;
     margin-top: 5%;}
 
 /*start styling uni page*/
+#uniPageLeft{height: auto;}
 #uniPageLeft{
 	background-color: rgba(62,128,95,0.50);
 	border-right: none;
@@ -168,5 +170,81 @@ border-bottom-left-radius: 0;
 #uniPageImg{
 	-webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+.colUniPageCenter{
+    text-align: center;
+}
+
+.uniListDiv{
+    font-size: 1.5rem;
+}
+.uniListUl{
+    list-style: none;
+    margin-top: 5%;
+}
+.uniListDiv li{
+   padding-bottom: 2%;
+  
+}
+
+.uniListDiv li a{
+    color: black;
+}
+
+.uniListDiv li a:hover{
+    color:#DEA912;
+    text-decoration: none;
+}
+
+.showMoreBtn{
+    border-top: 3px solid #DEA912;
+    
+}
+
+.showMoreBtn:hover{
+    background-color: #62987C;
+    border-radius: 8px;
+    cursor: pointer;
+     border-top: 1px solid #DEA912;
+}
+
+#uniSearch{
+	color: #000000;
+	background-color: #62987C !important;
+    border: none;
+}
+
+#uniSearchBtn{
+
+	background-color: #62987C;
+	border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+.ln-letters a{
+    border: 1px solid #DEA912;
+color: black;
+border-right: none;
+border-radius: 50%;
+margin: 3px;
+border-right: 1px solid #DEA912;
+    background-color: #DEA912;
+}
+
+.ln-letters .ln-last {
+    border-right: 1px solid #DEA912;
+}
+
+.ln-letter-count {
+    color:  #00594C;
+}
+
+.ln-letters a:hover,
+.ln-letters .ln-selected {
+  background-color: #00594C;
+  color: black;
+}
+
 }
 /*end styiling*/
