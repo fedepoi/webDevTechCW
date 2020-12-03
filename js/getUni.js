@@ -18,7 +18,7 @@ $(function() {
 	$(".uniListUl").append('<li class="uniListLi"> <a href="'+value.web_pages + '" >'+ value.name +'</a> </li>');      	
 });
         var liHeight = $(".uniListDiv" ).find( "li" ).outerHeight(true);
-    $(".uniListDiv" ).find( "ul" ).height(liHeight*11);   
+    $(".uniListDiv" ).find( "ul" ).height(liHeight*12);   
         $(".uniListUl").css("overflow","hidden");   	
         
         $(".uniListDiv").append(' <a class="showMoreBtn">Show more</a>'); 
@@ -45,7 +45,7 @@ function toggleInit(){
         toggle=1;
     } else {
         var liHeight = $(".uniListDiv" ).find( "li" ).outerHeight(true);
-        $(".uniListDiv" ).find( "ul" ).animate({ 'height': (liHeight * 11) + 'px' });
+        $(".uniListDiv" ).find( "ul" ).animate({ 'height': (liHeight * 12) + 'px' });
          $(".showMoreBtn").text("show more");
         toggle=0;
     }

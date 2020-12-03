@@ -84,17 +84,27 @@
 .homeButton{
 	background-color:#5B7671;
 	border: none;
-	color: white;
-	max-width: 120px;
-	width:120px;
-   height:50px;
+	
+	
    text-align:center;
    line-height:1.1em;
    font-size:1.1em;
 	border-radius: 8px;
-
+   max-width: 100px;
+   margin: 0 auto;
+    width: 100px;
+height: 40px;
+margin-top: 10px;
 }
 
+.homeButton a{
+    color: white;
+}
+
+.homeButton a:hover{
+    color: #DEA912;
+    text-decoration: none;
+}
 
 /*style jobPage*/
 .pageImg{
@@ -303,4 +313,75 @@ font-size: 1rem;
 .uniFunTextDiv{
     text-align: center;
 }
-/*end styiling*/
+/*end styiling uni Page*/
+/*start styling aboutUsPage*/
+.aboutPageCol{
+    text-align: center;
+}
+
+.aboutUsDiv{
+    font-size: 1.5rem;
+}
+
+.aboutPageImg{
+      
+	width: 30%;
+	/*margin-top: 50%;*/
+	 position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.contactUsForm{
+    background-color: #9ebfae;
+  
+}
+
+.contactUsForm input{
+    background-color: #62987c;
+    border:none;
+    border-radius: 8px;
+   /* height: calc(1.5em + .75rem + 2px);*/
+
+    margin-bottom: 5%;
+}
+
+.radio{
+    float: left;
+    margin-left: 20%;
+}
+.contactUsForm textarea{
+    background-color: #62987c;
+    border:none;
+    width: 90%;
+    resize: none;
+    height: 300px;
+}
+
+.contactUsForm label{
+    text-align: left;
+}
+
+.contactUsForm button{
+    float: right;
+    background-color: #DEA912;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    margin: 4% 9% 0 0;
+}
+
+.contactUsForm button:hover{background-color: #62987c;}
+
+.formColLeftDiv{
+    text-align: left;
+    margin-left: 15%;
+}
+.formColRightDiv{
+     text-align: left;
+  
+}
+.aboutPageContentWrapper{
+    margin-top: 5%;
+}
+/*end styling about us page*/
