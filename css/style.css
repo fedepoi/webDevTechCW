@@ -4,6 +4,8 @@
 	src: url("../font/Lato-Regular.ttf");
 	
 }
+
+
 /*nav menu style*/
 .navMenu{
     width: 100%;
@@ -246,5 +248,50 @@ border-right: 1px solid #DEA912;
   color: black;
 }
 
+.uniPageLinks{
+    background-color: rgba(62,128,95,0.50);
+}
+.imgLink{
+    width: 20%;
+  
+    
+}
+
+.uniPageLinksDiv{
+   
+font-size: 1rem;}
+.uniPageLinksDiv a{
+   color: black;
+   
+}
+
+.uniPageLinksDiv a:hover{
+      color:#DEA912;
+    text-decoration: none;
+}
+
+.linkSubDiv{
+    margin-top: 5%;
+    vertical-align: middle;
+}
+
+#govImg{
+    margin-left: 45%;
+    
+}
+#turn2usImg{
+    margin-left: 38%;
+}
+#scholHubImg{
+    margin-left: 21%;
+}
+
+.uniCol{
+   /* height: calc(100vh - 162px);*/
+    padding-bottom: 3%;
+}
+
+.uniFunTextDiv{
+    text-align: center;
 }
 /*end styiling*/
