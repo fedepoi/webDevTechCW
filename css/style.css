@@ -163,6 +163,13 @@ border-bottom-left-radius: 0;
     margin-top: 5%;}
 
 /*start styling uni page*/
+.uniColLeftDiv{
+    margin-top: 13%;
+}
+
+.uniColLeftDiv h5{
+    padding-top: 7%;
+}
 #uniPageLeft{height: auto;}
 #uniPageLeft{
 	background-color: rgba(62,128,95,0.50);
@@ -227,7 +234,7 @@ border-bottom-left-radius: 0;
 .ln-letters a{
     border: 1px solid #DEA912;
 color: black;
-border-right: none;
+
 border-radius: 50%;
 margin: 3px;
 border-right: 1px solid #DEA912;
@@ -239,13 +246,14 @@ border-right: 1px solid #DEA912;
 }
 
 .ln-letter-count {
-    color:  #00594C;
+    color:   #62987C;
 }
 
 .ln-letters a:hover,
 .ln-letters .ln-selected {
-  background-color: #00594C;
+  background-color: #62987C;
   color: black;
+    border: 1px solid #62987C;
 }
 
 .uniPageLinks{
@@ -258,8 +266,9 @@ border-right: 1px solid #DEA912;
 }
 
 .uniPageLinksDiv{
-   
-font-size: 1rem;}
+margin-top: 13%;   
+font-size: 1rem;
+}
 .uniPageLinksDiv a{
    color: black;
    
