@@ -65,7 +65,7 @@ We are based in glasgow: G38HP <br>
 If you desire to contact us dont hesitate to fill out the form down below we will get in touch soon.</p><br>
                 </div>
                 
-                <form class="contactUsForm" id="contactForm">
+                <form class="contactUsForm" id="contactForm" action="../php/processContactData.php" method="post">
                     <h3>Contact Us</h3>
                     
                     <div class="row">
@@ -73,17 +73,17 @@ If you desire to contact us dont hesitate to fill out the form down below we wil
                         
                         <div class="formColLeftDiv">
                          <label for="name">Name:</label><br>
-                    <input type="text" name="name"><br>
+                    <input type="text" name="name" id="name" required><br>
                     <label for="surname">Surname:</label><br>
-                    <input type="text" name="surname"><br>
-                    <label for="mail">Mail:</label><br>
-                    <input type="text" name="mail"><br>
+                    <input type="text" name="surname" id="surname" required><br>
+                    <label for="mail" >Mail:</label><br>
+                    <input type="text" name="mail" id="mail" required><br>
                     <label for="phoneNum">Phone number:</label><br>
-                    <input type="tel" name="phoneNum"><br>
+                    <input type="tel" name="phoneNum" id="phoneNum" required><br>
                     <p>Would you like to recieve news on jobs available?</p>
                             
-                  <div class="radio">  <input type="radio" name="ads" value="yes" id="yes"><label for="yes">yes</label></div>
-                    <div class="radio"><input type="radio" name="ads" value="no" id="no"><label for="no">no</label></div>
+                  <div class="radio">  <input type="radio" name="ads" value="yes" id="yes" required><label for="yes">yes</label></div>
+                    <div class="radio"><input type="radio" name="ads" value="no" id="no" required><label for="no">no</label></div>
                     
                             
                             </div>
@@ -92,7 +92,7 @@ If you desire to contact us dont hesitate to fill out the form down below we wil
                         <div class="formColRightDiv">
                          <label for="message">Message for us:</label><br>
                     <textarea name="message"></textarea><br>
-                    <button type="submit">Submit</button>
+                    <button type="submit" name="submit" id="submit" value="Submit">Submit</button>
                         </div>
                         </div>
                     </div>
