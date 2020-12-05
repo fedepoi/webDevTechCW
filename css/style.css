@@ -86,8 +86,6 @@
 .homeButton{
 	background-color:#5B7671;
 	border: none;
-	
-	
    text-align:center;
    line-height:1.1em;
    font-size:1.1em;
@@ -113,7 +111,7 @@ margin-top: 10px;
     border: 1px solid #DEA912;
     position: absolute;
 bottom: 35%;
-top: 80%;
+top: 90%;
 right: 10%;
 }
 
@@ -126,6 +124,9 @@ right: 10%;
 }
 
 /*style jobPage*/
+.goTopJob{
+    display:none;
+}
  .resTitleSelectDiv{
         display:none; 
     }
@@ -467,17 +468,17 @@ font-size: 1rem;
         padding: 20px 0 0 0;
         
     }
-    #contactUsHomeButton{top: 90%;}
+    #contactUsHomeButton{top: 125%;}
     
     #colLeft{
-        border-bottom: 1px solid #707070;
+        border-bottom: 1px solid #dea912;
     }
     
     #resultTitle{display: none;}
     
     .resTitleSelectDiv{
         display:block; 
-        margin-bottom: 20%;
+        margin-bottom: 35%;
     }
     
     .resTitleSelect{
@@ -493,15 +494,14 @@ font-size: 1rem;
         left: 60%;
     }
     
-    .jobPExpand{
-        
-   
-    
-    }
-    
     .jobPExpand svg{
         position: absolute;
     right: 15px;
     top: 4px; 
+        fill:#62987C;
+    }
+    
+    .goTopJob{
+        top: 95%;
     }
 }

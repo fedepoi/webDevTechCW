@@ -30,10 +30,12 @@ $(function() {
 		console.log(data);
 		/*need to print all the info from here*/
 		$(".col-sm-3").css("border-right"," 1px solid #707070");
-        $(".col-sm-12").css("border-bottom"," 1px solid #707070");
+        $(".col-sm-12").css("border-bottom"," 1px solid #dea912");
         $(".2ndCenter div").css("padding", "15px 15px 15px 15px");
         $(".col-sm-2").css("height", "auto");
         $(".col-sm-3").css("height", "auto");
+        
+       
         
 		$("<h3>Description:</h3>"+"<p>"+data.description+"</p>").appendTo($(".descP")).hide().slideDown("slow");
 		$("<h3>Qualification:</h3>"+"<p>"+data.qualifications+"</p>").appendTo($(".qualP")).hide().slideDown("slow");
@@ -303,6 +305,7 @@ function displayBarChart(){
 
 function checkScreenSize(){
      if ($(window).width() <= 768 ){
+          $(".goTopJob").css("display","block");
           $(".jobPExpand").css("display","block");
          $(".lineChartDiv").hide();
          $(".barChartDiv").hide();
