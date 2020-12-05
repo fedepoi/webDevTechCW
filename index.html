@@ -26,6 +26,34 @@
     <div class="container">
   <div class="row">
     <div class="col">
+        <!--start mobile menu credit goes to https://www.w3schools.com/howto/howto_js_mobile_navbar.asp-->
+         <div class="navMobile" >
+             <div class="imgDiv">
+  <a href="index.html" class="active"><img id="logo" src="img/logoColor.png" alt="logoPage" ></a>
+                 </div>
+  <div id="myLinks">
+    <a href="html/jobs.html">jobs</a>
+	<a href="html/universities.html">universities</a>
+    <a href="html/aboutUs.html">aboutUs</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+   <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-list" fill="#dea912" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+  </a>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+        <!--end mobile menu-->
+        
       <!--start css nav menu-->
        <div class="navMenu">
 		   <div class="imgDiv">

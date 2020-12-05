@@ -7,6 +7,8 @@
 
 
 /*nav menu style*/
+
+.navMobile{display: none;}
 .navMenu{
     width: 100%;
     background-color: #5B7671;
@@ -385,3 +387,51 @@ font-size: 1rem;
     margin-top: 5%;
 }
 /*end styling about us page*/
+
+
+/*media query for medium sized screens*/
+@media only screen and (max-width: 768px) {
+    .navMenu{display: none;}
+    .navMobile{
+        display: block;
+        overflow: hidden;
+  background-color:#00594C;
+  position: relative;    
+    }
+    
+    .navMobile #myLinks {
+  display: none;
+}
+    .active {
+  background-color: #5b7671;
+  color: white;
+}
+    .navMobile a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.navMobile a.icon {
+  background: #00594C;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+     padding: 10px 10px 10px 10px;
+}
+    
+#myLinks a:hover {
+  background-color: #dea912;
+  color: black;
+    text-decoration: none;
+}  
+    .imgDiv{
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+    
+}
