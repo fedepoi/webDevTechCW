@@ -78,7 +78,7 @@ function myFunction() {
 		
 	<!--first column-->
 		<div class="row " id="2ndRow">
-    <div class="col-sm-2 " >
+    <div class="col-sm-2 " id="colLeft">
 		<div class="jobSearchDiv">
 		<h5>Job:</h5> 
 		
@@ -101,14 +101,20 @@ function myFunction() {
 			<div id="resultTitle" class="list-group">
 			
 			</div>
+            
+            <div class="resTitleSelectDiv">
+                <select  class="resTitleSelect" name="resTitle" id="resTitle" onChange="displayInfo(event)">
+                <option value="" disabled selected>Select your option...</option>
+                </select>
+            </div>
 	</div>
 		
 		<img src="../img/jobColor.png" alt="jobPage image" id="jobPageImg" class="pageImg">
     </div>
 	
     <!--second column-->
-  <div class="col-sm-3">
-	  <div class="2ndCenter">
+  <div class="col-sm-3" id="colCenter">
+	  <div class="2ndCenter" >
 	  
 		  <div class="descP"></div>
 	
@@ -118,23 +124,47 @@ function myFunction() {
 	  </div>	  
   </div>	
     <!--third column-->
-    <div class="col">
+    <div class="col chartAccordion">
 		
 		<div class="row">
 		<!---->
 			
-		<div class="col-sm-6">
+		<div class="col-sm-6 " id="lineChartCol">
             
-		<div class="lineChartDiv"  > </div>
+          <div class="lineChartExpand jobPExpand">
+          <a>weekly estimate pay: 
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>      
+        </a>  
+          </div>  
+            
+		<div class="lineChartDiv chart"  > </div>
 		</div>
-		<div class="col-sm-6">
-       <div class="barChartDiv" > </div>
+		<div class="col-sm-6 " id="barChartCol">
+             <div class="barChartExpand jobPExpand">
+          <a>weekly avarege hours:
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>      
+        </a>  
+          </div>  
+       <div class="barChartDiv chart" > </div>
 			</div>
 
 			</div>
         <div class="row ">
-            <div class="col-md-11">
-			 <div class="pieChartDiv" > 
+            <div class="col-md-11 " id="pieChartCol">
+                 <div class="pieChartExpand jobPExpand">
+          <a>people working in this field studied:
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>      
+        </a>  
+          </div>  
+                
+                
+			 <div class="pieChartDiv chart"  > 
                  <canvas id="pieChart"></canvas>
                 </div>
 				
@@ -144,6 +174,42 @@ function myFunction() {
 		
 </div>
 			</div>	
+         <script>
+         $( document ).ready(function() {
+              if ($(window).width() <= 768 ){
+          
+              $("#colLeft").attr('class', 'col-sm-12');
+               $("#colCenter").attr('class', 'col-sm-12');
+                  $("#lineChartCol").attr('class', 'col-sm-12');
+                  $("#barChartCol").attr('class', 'col-sm-12');
+                  $("#pieChartCol").attr('class', 'col-md-12');
+
+       }
+             
+            
+             $(window).resize(function(){     
+
+       if ($(window).width() <= 768 ){
+          
+               $("#colLeft").attr('class', 'col-sm-12');
+            $("#colCenter").attr('class', 'col-sm-12');
+            $("#lineChartCol").attr('class', 'col-sm-12');
+                  $("#barChartCol").attr('class', 'col-sm-12');
+                  $("#pieChartCol").attr('class', 'col-md-12');
+
+       }
+                 else{
+                     $("#colLeft").attr('class', 'col-sm-2'); 
+                    $("#colCenter").attr('class', 'col-sm-3');
+                      $("#lineChartCol").attr('class', 'col-sm-6');
+                  $("#barChartCol").attr('class', 'col-sm-6');
+                  $("#pieChartCol").attr('class', 'col-md-11');
+                     }
+
+});
+});
+   
+    </script>
 
 </div>  
  

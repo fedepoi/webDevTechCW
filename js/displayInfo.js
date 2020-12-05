@@ -30,6 +30,7 @@ $(function() {
 		console.log(data);
 		/*need to print all the info from here*/
 		$(".col-sm-3").css("border-right"," 1px solid #707070");
+        $(".col-sm-12").css("border-bottom"," 1px solid #707070");
         $(".2ndCenter div").css("padding", "15px 15px 15px 15px");
         $(".col-sm-2").css("height", "auto");
         $(".col-sm-3").css("height", "auto");
@@ -44,7 +45,7 @@ $(function() {
 	displayPieChart();
 	displayLineChart();
 	displayBarChart();
-
+    checkScreenSize();
     	
 }
 
@@ -297,4 +298,27 @@ function displayBarChart(){
 	
 	
 	
+}
+
+
+function checkScreenSize(){
+     if ($(window).width() <= 768 ){
+          $(".jobPExpand").css("display","block");
+         $(".lineChartDiv").hide();
+         $(".barChartDiv").hide();
+         $(".pieChartDiv").hide();
+         
+         
+          $(".chart").hide();
+         $(".jobPExpand").click(function(){
+             $(".chart").slideUp("slow");
+             $(this).next(".chart").slideDown("slow");
+             
+         });
+
+         
+
+       }
+           
+       
 }

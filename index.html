@@ -7,17 +7,23 @@
  
 <!--personalised style sheet-->
 <link rel="stylesheet" href="css/style.css">
+  <!--Latest stable release of jQuery Core Library-->
+<script src="jQuery 3.5.1/jquery-3.5.1.min.js"  ></script>   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
 <!--Bootstrap-->
 <link rel="stylesheet" href="bootstrap-4.4.1/css/bootstrap.min.css">
-<!--Latest stable release of jQuery Core Library-->
-<script src="jQuery 3.5.1/jquery-3.5.1.min.js"  ></script> 
+
 
 <!--Bootstrap JS-->
 <script src="bootstrap-4.4.1/js/bootstrap.min.js">
 </script>
     
+    
+    
 <title>Homepage</title>
+    
+    
 </head>
 
 <body>
@@ -72,7 +78,7 @@ function myFunction() {
 		
 	
 		<div class="row ">
-    <div class="col-sm-4 ">
+    <div class="col-lg-4" id="imgCol">
       <img src="img/homepageColor.png" alt="homepage image" id="homepageImg">
     </div>
 			
@@ -93,10 +99,41 @@ In our universities dedicated page you will have all the answer you need.</p> <b
 			</div>
 			</div>	
 			
-			<div class="col-sm-4"></div>
+			<div class="col-sm-4" id="emptyCol">
+            <div class="homeButton" id="contactUsHomeButton">
+                   <a href="html/jobs.html" style="line-height: 40px;">Contact Us</a>
+                  </div>
+            </div>
 			
 		</div>	
-		
-</div>   
+		 <script>
+         $( document ).ready(function() {
+              if ($(window).width() <= 768 ){
+          
+              $("#imgCol").attr('class', 'col-lg-4 order-12');
+              $("#emptyCol").attr('class','');
+
+       }
+             
+            
+             $(window).resize(function(){     
+
+       if ($(window).width() <= 768 ){
+          
+              $("#imgCol").attr('class', 'col-lg-4 order-12');
+           $("#emptyCol").attr('class','');
+
+       }
+                 else{$("#imgCol").attr('class', 'col-lg-4'); 
+                     $("#emptyCol").attr('class','col-sm-4');
+                     }
+
+});
+});
+   
+    </script>
+</div>  
+   
+    
 </body>
 </html>

@@ -15,7 +15,16 @@ $(function() {
 		console.log(data);
 		
 	$.each( data, function( key, value ) {
-	$("#resultTitle").append('<button  id="resButton'+key+'" value= '+value.soc+' onclick="displayInfo(event)" >'+value.title+'</button> <br>').hide().slideDown("slow");
+        
+          if ($(window).width() <= 768 ){
+          
+               $(".resTitleSelect").append('<option value="'+value.soc+'">'+value.title+'</option>')
+            
+
+       }else{$("#resultTitle").append('<button  id="resButton'+key+'" value= '+value.soc+' onclick="displayInfo(event)" >'+value.title+'</button> <br>').hide().slideDown("slow");}
+	
+        
+  
 		return (key !== 4);
 });
 	

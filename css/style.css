@@ -108,7 +108,27 @@ margin-top: 10px;
     text-decoration: none;
 }
 
+#contactUsHomeButton{
+    background-color:rgba(0,0,0,0.00);
+    border: 1px solid #DEA912;
+    position: absolute;
+bottom: 35%;
+top: 80%;
+right: 10%;
+}
+
+#contactUsHomeButton a{
+    color: #DEA912;
+}
+
+#contactUsHomeButton:hover{
+   background-color: #5B7671;
+}
+
 /*style jobPage*/
+ .resTitleSelectDiv{
+        display:none; 
+    }
 .pageImg{
     
 	width: 15%;
@@ -173,6 +193,9 @@ border-bottom-left-radius: 0;
 }
 .barChartDiv{
     margin-top: 5%;}
+.jobPExpand{
+    display: none;
+}
 
 /*start styling uni page*/
 .uniColLeftDiv{
@@ -434,4 +457,51 @@ font-size: 1rem;
         margin: auto;
     }
     
+    .homepageTextDiv{
+        margin-top: 5%;
+        padding: 0 50px 0 50px;
+    }
+    
+    #homepageImg{
+        width: 65%;
+        padding: 20px 0 0 0;
+        
+    }
+    #contactUsHomeButton{top: 90%;}
+    
+    #colLeft{
+        border-bottom: 1px solid #707070;
+    }
+    
+    #resultTitle{display: none;}
+    
+    .resTitleSelectDiv{
+        display:block; 
+        margin-bottom: 20%;
+    }
+    
+    .resTitleSelect{
+        background-color:  #62987C;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        padding: 6px;
+    }
+    .pageImg{
+        position: absolute;
+        width: 30%;
+        left: 60%;
+    }
+    
+    .jobPExpand{
+        
+   
+    
+    }
+    
+    .jobPExpand svg{
+        position: absolute;
+    right: 15px;
+    top: 4px; 
+    }
 }
