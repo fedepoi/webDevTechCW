@@ -17,6 +17,10 @@ $(function() {
     req.done(function(data) {
 		console.log(data);
 		
+         if(data.length==0){
+            alert("the search produced 0 results try another keyword!");
+            $("#selectedTitle").val('');
+        }
 	$.each( data, function( key, value ) {
         
           if ($(window).width() <= 768 ){
@@ -26,7 +30,7 @@ $(function() {
 
        }else{$("#resultTitle").append('<button  id="resButton'+key+'" value= '+value.soc+' onclick="displayInfo(event)" >'+value.title+'</button> <br>').hide().slideDown("slow");}
 	
-        
+       
   
 		return (key !== 4);
 });
