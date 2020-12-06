@@ -10,7 +10,7 @@ try{
 	
 	$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	
-	echo("connected succesfully");
+	
 	
 }
 catch(PDOException $e){
@@ -30,9 +30,14 @@ $surname=$_POST['surname'];
 $mail=$_POST['mail'];
 $phoneNum=$_POST['phoneNum'];
 $ads=$_POST['ads'];
+if($ads == "yes"){
+    $ads=1;
+}else{$ads=0;}
 $message=$_POST['message'];
 $query->execute();
 $conn=null;
 
-echo("great working");
+echo("Many thanks for your message we will get you back soon");
+header( "refresh:1 ; url=../html/aboutUs.html" );
+
 ?>

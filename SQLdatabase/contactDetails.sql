@@ -21,7 +21,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `webdevcw`
 --
-
+drop database if exists webdevcw;
+CREATE DATABASE IF NOT EXISTS webdevcw DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE webdevcw;
 -- --------------------------------------------------------
 
 --
