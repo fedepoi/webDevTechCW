@@ -272,28 +272,29 @@ border-bottom-left-radius: 0;
 }
 
 .ln-letters a{
-    border: 1px solid #DEA912;
+    border: 1px solid #62987C;
 color: black;
 
 border-radius: 50%;
 margin: 3px;
-border-right: 1px solid #DEA912;
-    background-color: #DEA912;
+border-right: 1px solid #62987C;
+    background-color: #62987C;
 }
 
 .ln-letters .ln-last {
-    border-right: 1px solid #DEA912;
+    border-right: 1px solid #62987C;
 }
 
 .ln-letter-count {
-    color:   #62987C;
+    color:   black;
 }
 
 .ln-letters a:hover,
 .ln-letters .ln-selected {
-  background-color: #62987C;
+  background-color: #DEA912;
   color: black;
-    border: 1px solid #62987C;
+    border: 1px solid #DEA912;
+    text-decoration: none;
 }
 
 .uniPageLinks{
