@@ -198,6 +198,10 @@ border-bottom-left-radius: 0;
     display: none;
 }
 
+.arrowDown{
+    display: none;
+}
+
 /*start styling uni page*/
 .uniColLeftDiv{
     margin-top: 13%;
@@ -504,4 +508,39 @@ font-size: 1rem;
     .goTopJob{
         top: 95%;
     }
+    /*uni page medium Style*/
+    .uniPageLinksDiv{
+        margin-top: 2%;
+        
+    }
+    
+    .imgLink{
+        width: 7%;
+        float: right;
+    }
+    #scholHubImg{
+        width: 5%;
+    }
+    .linkSubDiv{
+        margin-top: 4%;
+    }
+    
+    .uniColLeftDiv{
+        margin: 0%;
+    }
+    .uniColLeftDiv h5 {
+    padding-top: 0%;
+}
+    .ln-letters{
+        padding-bottom: 19%;
+    } 
+    #uniPageImg {
+    -webkit-transform: none;
+    transform: none;
+}
+    /*about us Page*/
+    .aboutPageImg{
+        position: inherit;
+    }
+    
 }

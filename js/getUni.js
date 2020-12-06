@@ -26,6 +26,12 @@ $(function() {
         searchFilterInit();
           $(".uniListUl").listnav();
 	
+        
+        if ($(window).width() <= 360 ){
+          $(".uniListDiv" ).find( "ul" ).height((liHeight*12)+20);  
+                  
+       }
+        
     })
 });
 
@@ -46,6 +52,11 @@ function toggleInit(){
     } else {
         var liHeight = $(".uniListDiv" ).find( "li" ).outerHeight(true);
         $(".uniListDiv" ).find( "ul" ).animate({ 'height': (liHeight * 12) + 'px' });
+         if ($(window).width() <= 360 ){
+          $(".uniListDiv" ).find( "ul" ).animate({ 'height': ((liHeight * 12)+20) + 'px' });
+                  
+       }
+        
          $(".showMoreBtn").text("show more");
         toggle=0;
     }

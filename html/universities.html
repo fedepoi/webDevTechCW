@@ -104,12 +104,12 @@ function myFunction() {
 			
 			</div>
    
-			<div class="col-sm-7 colUniPageCenter uniCol">
+			<div class="col-sm-7 colUniPageCenter uniCol" id="uniColCenter">
 			<div class="uniListDiv"></div>
            
 			</div>
 			
-			<div class="col-sm-3 uniPageLinks uniCol" >
+			<div class="col-sm-3 uniPageLinks uniCol" id="uniPageLinks">
             <div class="uniPageLinksDiv">
                 <div class="uniFunTextDiv">
             <h5>Would you like to apply for some fundings?</h5>
@@ -136,6 +136,34 @@ function myFunction() {
             
             </div>
 			</div>	
+        <script>
+         $( document ).ready(function() {
+              if ($(window).width() <= 768 ){
+           $("#uniPageLeft").attr('class', 'col-sm-12 order-2');
+            $("#uniPageLinks").attr('class', 'col-sm-12 uniPageLinks uniCol order-1');
+            $("#uniColCenter").attr('class', 'col-sm-12 colUniPageCenter uniCol order-3');
+                  
+       }
+             
+            
+             $(window).resize(function(){     
+
+       if ($(window).width() <= 768 ){
+            $("#uniPageLinks").attr('class', 'col-sm-12 uniPageLinks uniCol order-1');
+           $("#uniPageLeft").attr('class', 'col-sm-12 order-2');
+          $("#uniColCenter").attr('class', 'col-sm-12 colUniPageCenter uniCol order-3');
+
+       }
+                 else{
+                      $("#uniPageLinks").attr('class', 'col-sm-3 uniPageLinks uniCol');
+                     $("#uniPageLeft").attr('class', 'col-sm-2');
+                     $("#uniColCenter").attr('class', 'col-sm-7 colUniPageCenter uniCol ');
+                     }
+
+});
+});
+   
+    </script>
 
 </div>  
  

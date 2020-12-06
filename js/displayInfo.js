@@ -305,17 +305,27 @@ function displayBarChart(){
 
 function checkScreenSize(){
      if ($(window).width() <= 768 ){
+        
           $(".goTopJob").css("display","block");
           $(".jobPExpand").css("display","block");
          $(".lineChartDiv").hide();
          $(".barChartDiv").hide();
          $(".pieChartDiv").hide();
+          $(".arrowDown").hide();
+            $(".arrowRight").show();
          
-         
-          $(".chart").hide();
+         /* $(".chart").hide();*/
+          /**/
          $(".jobPExpand").click(function(){
+            $(".arrowDown").hide();
+            $(".arrowRight").show();
+             $(this).find(".arrowDown").show();
+             $(this).find(".arrowRight").hide();
+            
+           
              $(".chart").slideUp("slow");
              $(this).next(".chart").slideDown("slow");
+             
              
          });
 

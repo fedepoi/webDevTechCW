@@ -79,7 +79,7 @@ function myFunction() {
 	<!--first column-->
 		<div class="row ">
 			
-			<div class="col-sm-4"></div>
+			<div class="col-sm-4 emptyCol"></div>
    
 			<div class="col aboutPageCol">
                 <div class="aboutPageContentWrapper">
@@ -125,19 +125,45 @@ If you desire to contact us dont hesitate to fill out the form down below we wil
                     </div>
                     
                    
-                   
+                    <img src="../img/aboutPagecolor.png" alt="aboutUsImg" class="aboutPageImg" id="formImg">
                 
                 </form>
-           <img src="../img/aboutPagecolor.png" alt="aboutUsImg" class="aboutPageImg">
+           <img src="../img/aboutPagecolor.png" alt="aboutUsImg" class="aboutPageImg" id="noFormImg">
 			</div>
                 </div>
 			
-			<div class="col-sm-4"></div>
+			<div class="col-sm-4 emptyCol"></div>
            
             
             
             
             </div>
+        <script>
+         $( document ).ready(function() {
+              if ($(window).width() <= 768 ){
+          $(".emptyCol").attr('class', 'emptyCol');
+          $("#noFormImg").hide();
+          $("formImg").show();
+       }
+             
+            
+             $(window).resize(function(){     
+
+       if ($(window).width() <= 768 ){
+            $(".emptyCol").attr('class', 'emptyCol');
+           $("#noFormImg").hide();
+          $("formImg").show();
+       }
+                 else{
+                      $(".emptyCol").attr('class', 'col-sm-4 emptyCol');
+                     $("#noFormImg").show();
+                     $("formImg").hide();
+                     }
+
+});
+});
+   
+    </script>
 			</div>	
 
 
