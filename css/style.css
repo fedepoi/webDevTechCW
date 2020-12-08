@@ -284,6 +284,9 @@ border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
 border-bottom-left-radius: 0;
 }
+.ln-letters{
+	margin-top: 6%;
+}
 
 .ln-letters a{
     border: 1px solid #62987C;
