@@ -213,7 +213,9 @@ border-bottom-left-radius: 0;
 ::-ms-input-placeholder { /* Microsoft Edge */
  color: #DCDCDC;
 }
-
+.form-control::placeholder {
+  color: #DCDCDC !important;
+}
 /*start styling uni page*/
 .uniColLeftDiv{
     margin-top: 13%;
@@ -335,6 +337,8 @@ font-size: 1rem;
 .linkSubDiv{
     margin-top: 5%;
     vertical-align: middle;
+	height: 124px;
+max-height: 124px;
 }
 
 #govImg{
@@ -363,7 +367,7 @@ font-size: 1rem;
 }
 
 .aboutUsDiv{
-    font-size: 1.5rem;
+    margin-top: 3%;
 }
 
 .aboutPageImg{
@@ -529,11 +533,11 @@ font-size: 1rem;
     }
     
     .imgLink{
-        width: 7%;
+        width: 15%;
         float: right;
     }
     #scholHubImg{
-        width: 5%;
+        width: 15%;
     }
     .linkSubDiv{
         margin-top: 4%;
