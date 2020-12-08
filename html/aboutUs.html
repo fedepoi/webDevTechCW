@@ -179,7 +179,7 @@ If you desire to contact us dont hesitate to fill out the form down below we wil
                  $(".error").html("");
                     validated(true);          
     }else{ 
-       
+       $(".error").remove();
         $("#mail").after('<span class="error" style="color:red;"><br>Enter a valid email address.</span>');
         
         validated(false);
@@ -189,13 +189,13 @@ If you desire to contact us dont hesitate to fill out the form down below we wil
             
             $("#phoneNum").focusout(function() {
                 var phone=$("#phoneNum").val();
-                if($.isNumeric(phone)) {
+                if($.isNumeric(phone) && phone.length==11) {
                     console.log("match");
                  $(".num").html("");
                     validated(true);          
     }else{ 
-       
-        $("#phoneNum").after('<span class="error num" style="color:red;"><br>Enter a valid phone number.</span>');
+        $(".error").remove();
+        $("#phoneNum").after('<span class="error num" style="color:red;"><br>Enter a valid phone number.<br> the number must have 11 numbers</span>');
         
         validated(false);
          console.log("error");
