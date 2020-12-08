@@ -139,8 +139,7 @@ right: 10%;
 }
 
 .jobSearchDiv{
-    padding-top: 20px;
-	
+    padding-top: 20px;	
 }
 
 
@@ -200,6 +199,19 @@ border-bottom-left-radius: 0;
 
 .arrowDown{
     display: none;
+}
+
+::placeholder {
+  color: #DCDCDC;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #DCDCDC;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #DCDCDC;
 }
 
 /*start styling uni page*/
