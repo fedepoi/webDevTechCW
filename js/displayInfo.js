@@ -87,12 +87,12 @@ function displayPieChart(){
                     data: items,
                     backgroundColor: [
                         '#64CC98',
-                        '#FFAF03',
+                        '#dea912',
                         '#3E805F',
                         '#5B7671',
                         '#00594C',
                         '#64CC98',
-                        '#FFAF03',
+                        '#dea912',
                         '#3E805F',
                         '#5B7671',
                         '#00594C'
@@ -170,7 +170,7 @@ function displayLineChart(){
 				    datasets: [{
             label: 'pay £',
             backgroundColor: 'rgba(0, 0, 0, 0.1)',
-            borderColor: '#FFAF03',
+            borderColor: '#dea912',
 		    borderWidth: 3 , 
 			hoverBackgroundColor: '#707070',
 			pointHoverBorderWidth: 5,
