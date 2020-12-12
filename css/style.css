@@ -231,8 +231,8 @@ border-bottom-left-radius: 0;
 }
 
 #uniPageImg{
-	-webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+	/*-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);*/
 }
 
 .colUniPageCenter{
@@ -544,6 +544,7 @@ max-height: 124px;
     }
     .linkSubDiv{
         margin-top: 4%;
+        height: 100px;
     }
     
     .uniColLeftDiv{
