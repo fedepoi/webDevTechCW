@@ -83,7 +83,12 @@ function myFunction() {
 	
 		<div class="row ">
     <div class="col-lg-4" id="imgCol">
-      <img src="img/homepageColor.png" alt="homepage image" id="homepageImg">
+        
+        <!--the commented line loads the svg that is not animated-->
+     <!-- <img src="img/svg/homepageColor.svg" alt="homepage image" id="homepageImg">-->
+        <!--this div is used to load the svg animation made in after effect and loaded with the bodymovin plugin-->
+        <div id="homepageImg"> </div>
+        
     </div>
 			
 			<div class="col">
@@ -107,7 +112,23 @@ In our universities dedicated page you will have all the answer you need.</p> <b
           
             </div>
 			
-		</div>	
+		</div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js" ></script>
+        <script>
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById("homepageImg"),
+            renderer: "svg",
+            loop: true,
+            autoplay: true,
+            path: "img/svg/animation/homeAnimation.json"
+            
+        })
+        </script>
+        
+        
+        
+        
 		 <script>
          $( document ).ready(function() {
               if ($(window).width() <= 768 ){

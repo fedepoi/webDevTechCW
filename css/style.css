@@ -72,8 +72,8 @@
 #homepageImg{
 	width: 90%;
 	padding-top: 40%;
-	-webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+	/*-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);*/
 }
 
 

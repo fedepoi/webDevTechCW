@@ -13,6 +13,8 @@ the entire website is customised with a css style sheet that also provide a resp
 
 On the university page link to each uni are embeded to each name, this has been highlited with an hover effect to make the user concius that each name is clickable.
 
+I have also used another plugin called bodymovin to load the svg animation created with illustrator and after effect. The animation will only load when a server is running, so for local preview xampp must be used, otherwise a crossorigin error will appear
+
 All the website images were taken from:
 
 https://iconscout.com/illustration-pack/business-360
