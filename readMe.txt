@@ -1,5 +1,5 @@
-Federico Vivaldo web development technologies 
-this my idea of website implementation there are several technologies used.
+Federico Vivaldo web development technologies part2:
+this is my idea of website implementation there are several technologies used.
 
 Bootstrap: is used for the grid layout and some small features such as the inputgroup, Bootstrap svg icons are also used.
 
